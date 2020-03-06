@@ -14,7 +14,7 @@ function App() {
     let cancelar
     axios.get(paginaAtual , {cancelToken : new axios.CancelToken(c => cancelar = c)})
     .then(response =>{
-      setPokemons(response.data.results.map(pokemon => pokemon.name))
+      setPokemons(response.data.results.map(pokemon => [pokemon.name,pokemon.url]))
       setProximaPagina(response.data.next)
       setPaginaAnterior(response.data.previous)
     }) 
@@ -31,6 +31,7 @@ function App() {
 
   return (
     <>
+      <Header/>
       <ListaPokemons listaPokemons = {pokemons} />
       <Paginacao 
       nextPage = {proximaPagina ? avancarPagina:null } 

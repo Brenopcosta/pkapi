@@ -1,9 +1,8 @@
 import React from 'react'
+import HeaderImg from '../../src/HeaderImg.png'
 
 export default function Header() {
     return (
-        <div>
-            
-        </div>
+            <img src={HeaderImg} alt="HeaderImg"/>
     )
 }

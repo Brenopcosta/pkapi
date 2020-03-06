@@ -1,0 +1,19 @@
+.pokemon{
+    width: 100%;
+    border: 3px solid #E0E0E0;
+    border-radius: 10px;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    padding: 3px;
+    padding-left:10px ;
+    margin: 5px;
+    font-size: 20px;
+    color:rgba(12, 11, 11, 0.562) ;
+}
+
+.pokeInfo{
+    padding: 30px;
+}
+.pokeSprite{
+    float: left;
+    padding-right: 50px;
+}
