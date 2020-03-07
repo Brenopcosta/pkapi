@@ -1,3 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#corpo{
+    width: 100%;
+}
+
+#titulo{
+    display: table;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+#listaPokemons{
+    display: table;
+    margin: 0 auto;
+    width:50%;
+}
+
+#botoesPaginacao{
+    display: table;
+    margin: 0 auto;
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+
+.botaoPaginacao{
+    display: inline-block;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 10px;
+    text-decoration: none;
+    background: #F2B90F;
+    font-family: sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    border-radius:015px;
+    color:#403404 ;
+}
+
 .pokemon{
     width: 100%;
     border: 3px solid #E0E0E0;
@@ -17,3 +60,4 @@
     float: left;
     padding-right: 50px;
 }
+
