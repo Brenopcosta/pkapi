@@ -2,6 +2,7 @@ import React , { useState , useEffect} from 'react';
 import Header from './Components/Header'
 import Paginacao from './Components/Paginacao'
 import ListaPokemons from './Components/ListaPokemons'
+import BuscaPokemon from './Components/BuscaPokemon'
 import axios from 'axios'
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
     let cancelar
     axios.get(paginaAtual , {cancelToken : new axios.CancelToken(c => cancelar = c)})
     .then(response =>{
-      setPokemons(response.data.results.map(pokemon => [pokemon.name,pokemon.url,true]))
+      setPokemons(response.data.results.map(pokemon => [pokemon.name,pokemon.url]))
       setProximaPagina(response.data.next)
       setPaginaAnterior(response.data.previous)
     }) 
@@ -33,6 +34,7 @@ function App() {
     <>
     <div id = "corpo">
       <Header/>
+      <BuscaPokemon/>
       <ListaPokemons listaPokemons = {pokemons} />
       <Paginacao 
       nextPage = {proximaPagina ? avancarPagina:null } 

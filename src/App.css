@@ -26,20 +26,21 @@
     margin-bottom: 20px;
 }
 
-.botaoPaginacao{
-    display: inline-block;
-    border: none;
-    padding: 1rem 2rem;
-    margin: 10px;
-    text-decoration: none;
-    background: #F2B90F;
-    font-family: sans-serif;
-    font-size: 1rem;
-    cursor: pointer;
-    text-align: center;
-    border-radius:015px;
-    color:#403404 ;
+.areaBusca{ 
+    display: table;
+    margin: 0 auto;
+    margin-top:20px;
+    margin-bottom: 20px;
 }
+
+.retornoBusca{
+    display: table;
+    margin: 0 auto;
+    margin-top:20px;
+    margin-bottom: 20px;
+    width: 50%;
+}
+
 
 .pokemon{
     width: 100%;
@@ -61,3 +62,35 @@
     padding-right: 50px;
 }
 
+.botaoPaginacao{
+    display: inline-block;
+    border: none;
+    padding: 1rem 2rem;
+    margin: 10px;
+    text-decoration: none;
+    background: #F2B90F;
+    font-family: sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    border-radius:015px;
+    color:#403404 ;
+}
+
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+    font-family: sans-serif;
+  }
+
+  
+.imputBusca{
+    text-decoration: none;
+    border-radius: 15px;
+    border: 1px solid #E0E0E0;
+    font-family: sans-serif;
+    height: 28px;
+    font-size: 18px;
+    padding: 5px;
+}

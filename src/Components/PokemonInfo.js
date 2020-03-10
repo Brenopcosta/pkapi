@@ -12,24 +12,16 @@ export default function PokemonInfo({pokemon}) {
 
 
     function getInfoAndtoggle (){
-        setMostrandoDados(false)
         if(!mostrandoDados){
             axios.get(pokemon[1]).then( response =>{
                 setSprite(response.data.sprites.front_default)
                 setPokeDexNumber(response.data.id)
-                setType([ type, response.data.types[0].type.name])
+                setType(response.data.types.map(type=>[type.type.name]))
                 setHeight(response.data.height)
                 setWeight(response.data.weight)
             })
         }
         setMostrandoDados(!mostrandoDados)
-    }
-    function criaArrayDeNomesDeTipos(array){
-        let arrayTemporario=[]
-        for(var i =0 ; i<array.length;i++){
-            arrayTemporario.push(array[i].type.name)
-        }
-        return arrayTemporario
     }
 
     return (
@@ -43,7 +35,7 @@ export default function PokemonInfo({pokemon}) {
             <span>
                 <div>Pokedex Number: {pokeDexNumber}</div>
                 <div>
-                    Tipo do Pokemon:{type}                                   
+                Tipo do Pokemon:{type.map(tipo => <div>{tipo}</div>)}                                   
                 </div>
                 <div>height: {height}ft</div>
                 <div>Weight: {weight}g </div>  
