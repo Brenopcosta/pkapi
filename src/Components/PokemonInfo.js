@@ -12,6 +12,7 @@ export default function PokemonInfo({pokemon}) {
 
 
     function getInfoAndtoggle (){
+        setMostrandoDados(!mostrandoDados)
         if(!mostrandoDados){
             axios.get(pokemon[1]).then( response =>{
                 setSprite(response.data.sprites.front_default)
@@ -25,12 +26,12 @@ export default function PokemonInfo({pokemon}) {
     }
 
     return (
-    <div class="pokemon" >  
-        <div onClick={getInfoAndtoggle}>  {pokemon[0]}</div>
+    <div class="pokemon" key = {pokemon[0]} >  
+        <div onClick={getInfoAndtoggle.bind()} key = {pokemon[0]}>  {pokemon[0]}</div>
         {mostrandoDados && 
-            <div class="pokeInfo">
+            <div class="pokeInfo" key ={pokeDexNumber} >
             <span class="pokeSprite">
-                <img src={sprite}/>
+                <img src={sprite} alt="Não foi possível carregar a imagem."/>
             </span>
             <span>
                 <div>Pokedex Number: {pokeDexNumber}</div>
